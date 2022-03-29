@@ -1,10 +1,12 @@
 body{
     margin-top: 0%;
     margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 footer {
-    background-color: #121315;
+    background-color: #000033;
     color: #ffffff;
     font-size: 16px;
   }
@@ -152,4 +154,66 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+a{
+  text-decoration: none;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border-color: orange;  
+  border-width: 5px;  
+  border-style: inset;  
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 1s;
+}
+
+.btn::before, .btn::after {
+  position: absolute;
+  background-image: url('https://i.gifer.com/origin/79/79081f5066fd90f142644f44d6017b99_w200.gif');
+  z-index: -1;
+  transition: 1s;
+  content: '';
+}
+
+.btn::before {
+  height: 50px;
+  width: 130px;
+}
+
+.btn::after {
+  width: 150px;
+  height: 30px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.btn:hover::before {
+  width: 0px;
+  background: yellow;
+}
+
+.btn:hover::after {
+  height: 0px;
+  background-image: url('https://i.imgur.com/nGZGHfH.gif');
+}
+
+.btn:hover {
+  background-image: url('https://thumbs.gfycat.com/AgileIcyBlackfootedferret-max-1mb.gif');
 }
